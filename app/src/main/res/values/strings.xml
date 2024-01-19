@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CinergyApp</string>
+    <string name="appLogo">App Logo</string>
+    <string name="join_the_magic">Join The Magic</string>
+    <string name="be_cinergy_elite">Be Cinergy Elite!</string>
+    <string name="enjoy_free_popcorn">Enjoy a free popcorn on sign up.</string>
+    <string name="enjoy_elite_reward">Enjoy a $5.00 Elite reward after 300 points to spend however you want.</string>
+    <string name="enjoy_special_birthday">Enjoy a special birthday movie ticket offer.</string>
+    <string name="enjoy_exclusive_content">Enjoy exclusive content , sneak peaks , and special offers!.</string>
+    <string name="sign_in_now">Sign In Now!</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="continueAsGuest">Continue As Guest</string>
+    <string name="accessibility_back_button">Back Button</string>
+    <string name="escape_rooms">Escape Rooms</string>
+    <string name="back">Back</string>
+    <string name="continueText">Continue</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="choose_time">Choose Time</string>
+    <string name="book_now">Book Now</string>
+</resources>

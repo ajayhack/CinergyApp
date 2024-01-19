@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/escapeRoomIV"
+        android:layout_width="@dimen/margin100"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h, 9:16"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/margin16"
+        android:contentDescription="@string/escape_rooms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/escapeRoomTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin16"
+        android:layout_marginStart="@dimen/margin16"
+        android:textSize="@dimen/mediumTextSize"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/escapeRoomIV"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/escapeRoomRatingTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin8"
+        android:layout_marginStart="@dimen/margin16"
+        android:textSize="@dimen/smallTextSize"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/lightGray"
+        app:layout_constraintStart_toEndOf="@+id/escapeRoomIV"
+        app:layout_constraintTop_toBottomOf="@+id/escapeRoomTV"/>
+
+    <TextView
+        android:id="@+id/chooseDatePlaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin8"
+        android:layout_marginStart="@dimen/margin16"
+        android:textSize="@dimen/smallTextSize"
+        android:fontFamily="sans-serif"
+        android:text="@string/choose_date"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escapeRoomIV"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dateRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/lightGray"
+        android:layout_marginStart="@dimen/margin16"
+        android:layout_marginEnd="@dimen/margin16"
+        android:layout_marginTop="@dimen/margin10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseDatePlaceholder" />
+
+    <TextView
+        android:id="@+id/chooseTimePlaceholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin8"
+        android:layout_marginStart="@dimen/margin16"
+        android:textSize="@dimen/smallTextSize"
+        android:fontFamily="sans-serif"
+        android:text="@string/choose_time"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateRecyclerview"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timeRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginStart="@dimen/margin16"
+        android:layout_marginEnd="@dimen/margin16"
+        android:layout_marginTop="@dimen/margin10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseTimePlaceholder" />
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin20"
+        android:layout_marginEnd="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin20"
+        android:text="@string/continueText"
+        android:textColor="@color/black"
+        android:textSize="@dimen/mediumTextSize"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/margin20"
+        android:background="@drawable/rounded_button_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

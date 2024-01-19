@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llParent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/margin16"
+        android:layout_marginTop="@dimen/margin16"
+        android:layout_marginBottom="@dimen/margin16"
+        android:layout_marginEnd="@dimen/margin8"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/closeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintDimensionRatio="h, 9:16"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_gravity="end"
+            android:src="@drawable/baseline_cancel_24"
+            android:contentDescription="@string/escape_rooms" />
+
+    <LinearLayout
+        android:id="@+id/llSubParent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin300"
+        android:layout_marginTop="@dimen/margin6"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/escapeRoomIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/escape_rooms"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/escapeRoomTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_marginStart="@dimen/margin4"
+            android:textSize="@dimen/smallTextSize"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin4"
+                android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/margin2"
+                android:textSize="@dimen/xsmallTextSize"
+                android:gravity="center_vertical"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/lightGray"
+                app:drawableStartCompat="@drawable/baseline_calendar_month_24" />
+
+                <TextView
+                    android:id="@+id/ticketsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/margin2"
+                    android:textSize="@dimen/xsmallTextSize"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/lightGray"
+                    app:drawableStartCompat="@drawable/round_account_circle_24" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/synopsisTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginStart="@dimen/margin4"
+                android:textSize="@dimen/smallTextSize"
+                android:ellipsize="end"
+                android:maxLines="12"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/lightGray" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin60"
+        android:layout_marginTop="@dimen/margin10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/book_now"
+        android:textColor="@color/black"
+        android:textSize="@dimen/mediumTextSize"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_button_background"
+        app:layout_constraintTop_toBottomOf="@+id/llParent"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
